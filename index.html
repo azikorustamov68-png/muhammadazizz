@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mega Wester — Zamonaviy Xususiy Maktab va Kelajak Ta'lim Maskani</title>
+  <meta name="description" content="Mega Wester xususiy maktabi — yuqori sifatli ta'lim, xalqaro dasturlar, STEAM, IT va chet tillari chuqurlashtirilgan zamonaviy maktab.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Asosiy CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== YUQORI TEZKOR XABAR PANELI ==================== -->
+  <aside class="top-announcement" aria-label="Tezkor e'lon">
+    <div class="container announcement-content">
+      <div class="announcement-left">
+        <span class="badge-fire"><i class="fa-solid fa-bolt"></i> QABUL 2025/2026</span>
+        <p>Yangi o'quv yili uchun imtihonlar boshlandi! <strong>25% gacha ta'lim granti</strong> sohibi bo'ling.</p>
+      </div>
+      <div class="announcement-right">
+        <a href="#qabul" class="announcement-link">Ariza qoldirish <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="theme-switch-wrapper">
+          <button id="themeToggleBtn" class="theme-btn" title="Mavzuni almashtirish" aria-label="Mavzuni o'zgartirish">
+            <i class="fa-solid fa-moon"></i>
+            <span class="theme-text">Tun</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== ASOSIY NAVBAR (NAVIGATSIYA) ==================== -->
+  <header class="site-header" id="header">
+    <div class="container navbar">
+      <!-- LOGO -->
+      <a href="#bosh-sahifa" class="logo">
+        <div class="logo-icon-wrap">
+          <svg class="logo-svg" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4F46E5" />
+                <stop offset="50%" stop-color="#7C3AED" />
+                <stop offset="100%" stop-color="#EC4899" />
+              </linearGradient>
+              <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F59E0B" />
+                <stop offset="100%" stop-color="#FBBF24" />
+              </linearGradient>
+            </defs>
+            <rect width="60" height="60" rx="16" fill="url(#logoGrad)"/>
+            <!-- Qalqon va Kitob / M harfi shakli -->
+            <path d="M14 18L30 11L46 18V31C46 41 39 49 30 52C21 49 14 41 14 31V18Z" stroke="#FFFFFF" stroke-width="2.5" fill="rgba(255,255,255,0.08)"/>
+            <!-- M va W harflari simvolikasi -->
+            <path d="M21 34V22L30 30L39 22V34" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Yulduzcha -->
+            <polygon points="30,17 32,21 36,21 33,23 34,27 30,24 26,27 27,23 24,21 28,21" fill="url(#goldGrad)"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">MEGA <span>WESTER</span></span>
+          <span class="logo-subtitle">XUSUSIY MAKTABI</span>
+        </div>
+      </a>
+
+      <!-- NAVIGATSIYA HAVOLALARI -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#bosh-sahifa" class="nav-link active">Bosh sahifa</a>
+        <a href="#biz-haqimizda" class="nav-link">Biz haqimizda</a>
+        <a href="#yonalishlar" class="nav-link">Ta'lim yo'nalishlari</a>
+        <a href="#afzalliklar" class="nav-link">Afzalliklar</a>
+        <a href="#ustozlar" class="nav-link">Ustozlar</a>
+        <a href="#kalkulyator" class="nav-link">Kalkulyator</a>
+        <a href="#fikrlar" class="nav-link">Fikrlar</a>
+        <a href="#savollar" class="nav-link">FAQ</a>
+        <a href="#boglanish" class="nav-link">Bog'lanish</a>
+        
+        <div class="mobile-nav-cta">
+          <a href="#qabul" class="btn btn-primary btn-block" onclick="closeMobileMenu()">
+            <i class="fa-solid fa-user-graduate"></i> Qabulga yozilish
+          </a>
+        </div>
+      </nav>
+
+      <!-- O'NG TOMON HARAKAT TUGMALARI -->
+      <div class="nav-actions">
+        <a href="tel:+998712000000" class="phone-link d-none-mobile">
+          <i class="fa-solid fa-phone-volume"></i>
+          <span>+998 (71) 200-00-00</span>
+        </a>
+        <a href="#qabul" class="btn btn-primary nav-cta">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>Qabulga yozilish</span>
+        </a>
+        <button class="burger-btn" id="burgerBtn" aria-label="Menyuni ochish" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBIL MENYU BACKDROP ==================== -->
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+  <!-- ==================== HERO SECTION (ASOSIY QISM) ==================== -->
+  <section class="hero-section" id="bosh-sahifa">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="glow-orb glow-1"></div>
+      <div class="glow-orb glow-2"></div>
+    </div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>Yevropa va Milliy Ta'lim Standartlari</span>
+        </div>
+        <h1 class="hero-title">
+          Kelajak Liderlari Ulg'ayadigan Maskanga <span class="gradient-text">Xush Kelibsiz!</span>
+        </h1>
+        <p class="hero-desc">
+          <strong>Mega Wester</strong> — bolangizning intellektual salohiyati, mustaqil fikrlashi, xorijiy tillarni erkin egallashi va zamonaviy IT ko'nikmalarini kashf qiluvchi innovatsion xususiy maktab.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#qabul" class="btn btn-primary btn-lg shadow-glow">
+            <i class="fa-solid fa-clipboard-check"></i>
+            <span>Ariza topshirish</span>
+          </a>
+          <button class="btn btn-outline btn-lg" id="openVideoTourBtn">
+            <i class="fa-solid fa-circle-play"></i>
+            <span>Virtual sayohat</span>
+          </button>
+          <button class="btn btn-subtle btn-lg" id="openArizalarHistoryBtn">
+            <i class="fa-solid fa-list-check"></i>
+            <span>Arizam holati</span>
+          </button>
+        </div>
+
+        <div class="hero-features-strip">
+          <div class="feature-mini-item">
+            <div class="mini-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="mini-text">
+              <strong>100% Xavfsizlik</strong>
+              <span>24/7 video-kuzatuv</span>
+            </div>
+          </div>
+          <div class="feature-mini-item">
+            <div class="mini-icon"><i class="fa-solid fa-utensils"></i></div>
+            <div class="mini-text">
+              <strong>3 Mahal Taom</strong>
+              <span>Sog'lom & parhezli</span>
+            </div>
+          </div>
+          <div class="feature-mini-item">
+            <div class="mini-icon"><i class="fa-solid fa-bus"></i></div>
+            <div class="mini-text">
+              <strong>Maktab Avtobusi</strong>
+              <span>Eshikdan eshikkacha</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- O'NG TOMON VIZUAL KARTASI -->
+      <div class="hero-visual">
+        <div class="hero-card-glass">
+          <div class="card-header-badge">
+            <i class="fa-solid fa-award"></i>
+            <span>Top-10 Innovatsion Maktab</span>
+          </div>
+          <div class="hero-image-box">
+            <!-- SVG / CSS zamonaviy illyustratsiya -->
+            <div class="school-illustration">
+              <div class="building-base">
+                <div class="roof">
+                  <div class="flag"><i class="fa-solid fa-flag text-gold"></i></div>
+                </div>
+                <div class="clock-tower">
+                  <div class="clock"><i class="fa-regular fa-clock"></i></div>
+                </div>
+                <div class="windows-grid">
+                  <span class="win lit"></span>
+                  <span class="win lit"></span>
+                  <span class="win"></span>
+                  <span class="win lit"></span>
+                  <span class="win"></span>
+                  <span class="win lit"></span>
+                </div>
+                <div class="main-gate">
+                  <i class="fa-solid fa-door-open"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Suzuvchi ma'lumot elementlari -->
+          <div class="floating-badge badge-top-right">
+            <div class="badge-icon green"><i class="fa-solid fa-circle-check"></i></div>
+            <div>
+              <strong>Prezident Maktabiga</strong>
+              <span>Tayyorlov dasturi</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-left">
+            <div class="badge-icon blue"><i class="fa-solid fa-globe"></i></div>
+            <div>
+              <strong>Cambridge English</strong>
+              <span>Native speakerlar</span>
+            </div>
+          </div>
+
+          <div class="quick-counter-pill">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span><strong>1,200+</strong> iqtidorli bitiruvchilar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATISTIKA BLOKI -->
+    <div class="container hero-stats-bar" id="statsBar">
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+        <div class="stat-info">
+          <h3 class="stat-number" data-target="1500">0</h3>
+          <span class="stat-suffix">+</span>
+          <p>Muvaffaqiyatli O'quvchi</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+        <div class="stat-info">
+          <h3 class="stat-number" data-target="65">0</h3>
+          <span class="stat-suffix">+</span>
+          <p>Oliy Toifali Ustozlar</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fa-solid fa-percent"></i></div>
+        <div class="stat-info">
+          <h3 class="stat-number" data-target="98">0</h3>
+          <span class="stat-suffix">%</span>
+          <p>OTMga Kirish Ko'rsatkichi</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fa-solid fa-trophy"></i></div>
+        <div class="stat-info">
+          <h3 class="stat-number" data-target="180">0</h3>
+          <span class="stat-suffix">+</span>
+          <p>Olimpiada G'oliblari</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BIZ HAQIMIZDA BO'LIMI ==================== -->
+  <section class="section about-section" id="biz-haqimizda">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="sub-badge"><i class="fa-solid fa-school"></i> Biz Haqimizda</span>
+        <h2 class="section-title">Ta'limda Yangi Standartlarni BelGilaymiz</h2>
+        <p class="section-desc">Mega Wester maktabi 2018-yildan buyon har bir o'quvchining ichki qobiliyatini yuzaga chiqarish va ularni dunyo miqyosidagi raqobatbardosh mutaxassis qilib tarbiyalashni o'z oldiga maqsad qilgan.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card glass-panel">
+          <div class="about-icon-box">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3>STEAM & Innovatsion Metodika</h3>
+          <p>Fan, texnologiya, muhandislik, san'at va matematikani uyg'unlashtirgan amaliy darslar o'quvchilarda tanqidiy fikrlashni shakllantiradi.</p>
+          <ul class="about-card-list">
+            <li><i class="fa-solid fa-check"></i> Amaliy laboratoriya tajribalari</li>
+            <li><i class="fa-solid fa-check"></i> Har haftalik loyihaviy ishlar</li>
+            <li><i class="fa-solid fa-check"></i> Muammolarni mustaqil yechish</li>
+          </ul>
+        </div>
+
+        <div class="about-card glass-panel highlight-card">
+          <div class="about-icon-box">
+            <i class="fa-solid fa-language"></i>
+          </div>
+          <h3>Xalqaro Ingliz Tili Muhiti</h3>
+          <p>Cambridge Assessment dasturi asosida ona tili ingliz tili bo'lgan mutaxassislar (Native speakers) bilan har kuni suhbat va mashg'ulotlar.</p>
+          <ul class="about-card-list">
+            <li><i class="fa-solid fa-check"></i> IELTS 7.5+ kafolatlangan tayyorgarlik</li>
+            <li><i class="fa-solid fa-check"></i> Speaking klublar va debatlar</li>
+            <li><i class="fa-solid fa-check"></i> Xalqaro sertifikatlash imtihonlari</li>
+          </ul>
+        </div>
+
+        <div class="about-card glass-panel">
+          <div class="about-icon-box">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3>Kiber & IT Ko'nikmalar</h3>
+          <p>Boshlang'ich sinflardan boshlab algoritmik fikrlash, Scratch, Python dasturlash, 3D modellashtirish va Robototexnika sirlari o'rgatiladi.</p>
+          <ul class="about-card-list">
+            <li><i class="fa-solid fa-check"></i> Zamonaviy iMac va PC sinflari</li>
+            <li><i class="fa-solid fa-check"></i> Sun'iy intellekt asoslari</li>
+            <li><i class="fa-solid fa-check"></i> Startap loyihalar yaratish</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- KENG QAMROVLI QADRIYATLAR -->
+      <div class="values-banner">
+        <div class="value-item">
+          <span class="v-num">01</span>
+          <div>
+            <h4>Mehr va E'tibor</h4>
+            <p>Har bir sinfda ko'pi bilan 16-18 nafar o'quvchi va individual yondashuv.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="v-num">02</span>
+          <div>
+            <h4>To'liq Kunlik Rejim</h4>
+            <p>08:30 dan 17:30 gacha darslar, uy vazifalari maktabda bajariladi.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="v-num">03</span>
+          <div>
+            <h4>Barkamol Avlod</h4>
+            <p>Shaxmat, suzish, taekvondo, futbol, mental arifmetika va rassomchilik.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TA'LIM YO'NALISHLARI & KURSLAR ==================== -->
+  <section class="section courses-section" id="yonalishlar">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="sub-badge"><i class="fa-solid fa-book-open"></i> Dasturlarimiz</span>
+        <h2 class="section-title">Barcha Yosh Bosqichlari Uchun Yo'nalishlar</h2>
+        <p class="section-desc">Farzandingizning yoshi va maqsadiga mos keladigan eng samarali o'quv dasturini tanlang.</p>
+      </div>
+
+      <!-- FILTR TUGMALARI -->
+      <div class="filter-tabs">
+        <button class="filter-tab-btn active" data-filter="all">Barchasi</button>
+        <button class="filter-tab-btn" data-filter="boshlangich">Boshlang'ich (1-4 sinf)</button>
+        <button class="filter-tab-btn" data-filter="yuqori">O'rta & Yuqori (5-11 sinf)</button>
+        <button class="filter-tab-btn" data-filter="prezident">Prezident Maktabiga Tayyorlov</button>
+        <button class="filter-tab-btn" data-filter="it-tillar">IT & Xorijiy Tillar</button>
+      </div>
+
+      <!-- KURSLAR TO'PLAMI -->
+      <div class="courses-grid" id="coursesGrid">
+        <!-- 1-kurs: Boshlang'ich -->
+        <div class="course-card" data-category="boshlangich">
+          <div class="course-header">
+            <span class="course-tag primary">1 - 4 Sinflar</span>
+            <span class="course-duration"><i class="fa-regular fa-clock"></i> 08:30 - 17:00</span>
+          </div>
+          <div class="course-icon"><i class="fa-solid fa-pencil"></i></div>
+          <h3 class="course-title">Boshlang'ich Ta'lim Akademiyasi</h3>
+          <p class="course-desc">Kichkintoylar uchun o'qish, yozish, mantiqiy matematika, erkin so'zlashuv va o'yin orqali qiziqarli ta'lim.</p>
+          <div class="course-includes">
+            <span><i class="fa-solid fa-check"></i> 3 mahal issiq ovqat</span>
+            <span><i class="fa-solid fa-check"></i> Shaxmat va Mental arifmetika</span>
+            <span><i class="fa-solid fa-check"></i> Har kuni 2 soat ingliz tili</span>
+            <span><i class="fa-solid fa-check"></i> Uy vazifalarini nazorat qilish</span>
+          </div>
+          <div class="course-footer">
+            <div class="course-price">
+              <span class="price-label">Oylik to'lov:</span>
+              <span class="price-val">3,800,000 so'm</span>
+            </div>
+            <button class="btn btn-outline-primary btn-sm select-course-btn" data-course="Boshlang'ich sinf (1-4)">
+              Tanlash
+            </button>
+          </div>
+        </div>
+
+        <!-- 2-kurs: O'rta & Yuqori -->
+        <div class="course-card" data-category="yuqori">
+          <div class="course-header">
+            <span class="course-tag success">5 - 11 Sinflar</span>
+            <span class="course-duration"><i class="fa-regular fa-clock"></i> 08:30 - 17:30</span>
+          </div>
+          <div class="course-icon"><i class="fa-solid fa-microscope"></i></div>
+          <h3 class="course-title">Aniq & Tabiiy Fanlar Chuqurlashtirilgan</h3>
+          <p class="course-desc">Matematika, Fizika, Kimyo, Biologiya va Iqtisodiyot fanlarini chuqur o'rganish va OTMlarga tayyorgarlik.</p>
+          <div class="course-includes">
+            <span><i class="fa-solid fa-check"></i> DTM va Xalqaro imtihonlarga tayyorlov</span>
+            <span><i class="fa-solid fa-check"></i> Zamonaviy laboratoriya mashg'ulotlari</span>
+            <span><i class="fa-solid fa-check"></i> IELTS va SAT darslari bepul</span>
+            <span><i class="fa-solid fa-check"></i> Psixologik qo'llab-quvvatlash</span>
+          </div>
+          <div class="course-footer">
+            <div class="course-price">
+              <span class="price-label">Oylik to'lov:</span>
+              <span class="price-val">4,200,000 so'm</span>
+            </div>
+            <button class="btn btn-outline-primary btn-sm select-course-btn" data-course="Yuqori sinf (5-11)">
+              Tanlash
+            </button>
+          </div>
+        </div>
+
+        <!-- 3-kurs: Prezident maktabiga -->
+        <div class="course-card popular" data-category="prezident">
+          <div class="popular-ribbon">Eng Ommabop</div>
+          <div class="course-header">
+            <span class="course-tag warning">4 - 6 Sinflar</span>
+            <span class="course-duration"><i class="fa-regular fa-clock"></i> Maxsus rejim</span>
+          </div>
+          <div class="course-icon"><i class="fa-solid fa-crown"></i></div>
+          <h3 class="course-title">Prezident va Al-Xorazmiy Tayyorlov</h3>
+          <p class="course-desc">Tanqidiy fikrlash (Critical Thinking), Muammo yechish (Problem Solving) va Ingliz tilidan maxsus intensiv kurs.</p>
+          <div class="course-includes">
+            <span><i class="fa-solid fa-check"></i> Cambridge Assessment testlari</span>
+            <span><i class="fa-solid fa-check"></i> Haftalik real simulyatsion imtihonlar</span>
+            <span><i class="fa-solid fa-check"></i> Kuchli psixologik tayyorgarlik</span>
+            <span><i class="fa-solid fa-check"></i> 87% o'quvchilarimiz qabul qilingan</span>
+          </div>
+          <div class="course-footer">
+            <div class="course-price">
+              <span class="price-label">Oylik to'lov:</span>
+              <span class="price-val">4,500,000 so'm</span>
+            </div>
+            <button class="btn btn-primary btn-sm select-course-btn" data-course="Prezident Maktabiga Tayyorlov">
+              Tanlash
+            </button>
+          </div>
+        </div>
+
+        <!-- 4-kurs: IT va Robototexnika -->
+        <div class="course-card" data-category="it-tillar">
+          <div class="course-header">
+            <span class="course-tag info">Barcha yoshlar</span>
+            <span class="course-duration"><i class="fa-regular fa-clock"></i> 3 kun / hafta</span>
+          </div>
+          <div class="course-icon"><i class="fa-solid fa-code"></i></div>
+          <h3 class="course-title">Mega Wester IT & Kiber Akademiya</h3>
+          <p class="course-desc">Python dasturlash, Web dasturlash (HTML/CSS/JS), Sun'iy Intellekt va Robototexnika bo'yicha amaliy to'garaklar.</p>
+          <div class="course-includes">
+            <span><i class="fa-solid fa-check"></i> Shaxsiy portfolio loyihalar</span>
+            <span><i class="fa-solid fa-check"></i> Xalqaro IT olimpiadalariga chiqish</span>
+            <span><i class="fa-solid fa-check"></i> Lego Mindstorms & Arduino</span>
+            <span><i class="fa-solid fa-check"></i> IT sertifikatlar beriladi</span>
+          </div>
+          <div class="course-footer">
+            <div class="course-price">
+              <span class="price-label">Oylik to'lov:</span>
+              <span class="price-val">1,200,000 so'm</span>
+            </div>
+            <button class="btn btn-outline-primary btn-sm select-course-btn" data-course="IT & Robototexnika">
+              Tanlash
+            </button>
+          </div>
+        </div>
+
+        <!-- 5-kurs: Xorijiy tillar -->
+        <div class="course-card" data-category="it-tillar">
+          <div class="course-header">
+            <span class="course-tag purple">Xalqaro</span>
+            <span class="course-duration"><i class="fa-regular fa-clock"></i> Intensive</span>
+          </div>
+          <div class="course-icon"><i class="fa-solid fa-earth-americas"></i></div>
+          <h3 class="course-title">Xorijiy Tillar: IELTS, SAT & Nemis tili</h3>
+          <p class="course-desc">AQSH, Yevropa va Osiyoning nufuzli universitetlariga to'liq grant yutishga qaratilgan maqsadli dastur.</p>
+          <div class="course-includes">
+            <span><i class="fa-solid fa-check"></i> Native speaker ustozlar</span>
+            <span><i class="fa-solid fa-check"></i> Mock testlar va bepul tahlillar</span>
+            <span><i class="fa-solid fa-check"></i> Motivatsion xat yozish mahorati</span>
+            <span><i class="fa-solid fa-check"></i> Xalqaro viza & konsultatsiya</span>
+          </div>
+          <div class="course-footer">
+            <div class="course-price">
+              <span class="price-label">Oylik to'lov:</span>
+              <span class="price-val">1,500,000 so'm</span>
+            </div>
+            <button class="btn btn-outline-primary btn-sm select-course-btn" data-course="IELTS & SAT Kurslari">
+              Tanlash
+            </button>
+          </div>
+        </div>
+
+        <!-- 6-kurs: Sport va San'at -->
+        <div class="course-card" data-category="boshlangich">
+          <div class="course-header">
+            <span class="course-tag success">Sog'lom Hayot</span>
+            <span class="course-duration"><i class="fa-regular fa-clock"></i> Tushdan keyin</span>
+          </div>
+          <div class="course-icon"><i class="fa-solid fa-swimming-pool"></i></div>
+          <h3 class="course-title">Suzish, Gimnastika va San'at</h3>
+          <p class="course-desc">Bolaning jismoniy baquvvat bo'lishi va estetik didini rivojlantirish uchun to'liq jihozlangan sport majmuasi.</p>
+          <div class="course-includes">
+            <span><i class="fa-solid fa-check"></i> Zamonaviy yopiq basseyn</span>
+            <span><i class="fa-solid fa-check"></i> Professional murabbiylar</span>
+            <span><i class="fa-solid fa-check"></i> Teatr va musika to'garaklari</span>
+            <span><i class="fa-solid fa-check"></i> Maktab o'quvchilari uchun bepul</span>
+          </div>
+          <div class="course-footer">
+            <div class="course-price">
+              <span class="price-label">Status:</span>
+              <span class="price-val text-success">Dastur ichida mavjud</span>
+            </div>
+            <button class="btn btn-outline-primary btn-sm select-course-btn" data-course="Sport va San'at">
+              Tanlash
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== AFZALLIKLARIMIZ BO'LIMI ==================== -->
+  <section class="section advantages-section" id="afzalliklar">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="sub-badge"><i class="fa-solid fa-star"></i> Nega Biz?</span>
+        <h2 class="section-title">Ota-onalar Nima Uchun Mega Wester Maktabini Tanlashadi?</h2>
+        <p class="section-desc">Biz faqat dars bermaymiz, biz farzandingizning shaxsiyatini, intizomini va mustaqil kelajagini birga quramiz.</p>
+      </div>
+
+      <div class="adv-grid">
+        <div class="adv-box">
+          <div class="adv-icon"><i class="fa-solid fa-camera"></i></div>
+          <h4>Xavfsiz Hudud & Face-ID</h4>
+          <p>Ota-onalar farzandining maktabga kirib-chiqqanini mobil ilova orqali real vaqtda ko'rib turadilar.</p>
+        </div>
+
+        <div class="adv-box">
+          <div class="adv-icon"><i class="fa-solid fa-apple-whole"></i></div>
+          <h4>Sog'lom Ovqatlanish Tizimi</h4>
+          <p>Malakali diyetolog nazoratida tayyorlanadigan tabiiy va vitaminlarga boy 3 mahal menyu.</p>
+        </div>
+
+        <div class="adv-box">
+          <div class="adv-icon"><i class="fa-solid fa-user-tie"></i></div>
+          <h4>Xalqaro Diplomli Ustozlar</h4>
+          <p>Har bir pedagog doimiy ravishda Buyuk Britaniya va Yevropa metodikasi bo'yicha attestatsiyadan o'tadi.</p>
+        </div>
+
+        <div class="adv-box">
+          <div class="adv-icon"><i class="fa-solid fa-house-laptop"></i></div>
+          <h4>Uyga Vazifasiz Oqshom</h4>
+          <p>Barcha uy vazifalari maktabning o'zida repetitor-ustoz nazoratida to'liq bajariladi va tekshiriladi.</p>
+        </div>
+
+        <div class="adv-box">
+          <div class="adv-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h4>Elektron Kundalik & Hisobot</h4>
+          <p>Har haftalik o'zlashtirish, imtihon natijalari va psixologik holat haqida ota-onalarga individual xulosa.</p>
+        </div>
+
+        <div class="adv-box">
+          <div class="adv-icon"><i class="fa-solid fa-bus-simple"></i></div>
+          <h4>Qulay Avtobus Xizmati</h4>
+          <p>Shahar bo'ylab xavfsiz va qulay transport xizmati: bolangizni uydan olib kelib, uyga yetkazadi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== USTOZLARIMIZ BO'LIMI ==================== -->
+  <section class="section teachers-section" id="ustozlar">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="sub-badge"><i class="fa-solid fa-chalkboard-user"></i> Pedagoglarimiz</span>
+        <h2 class="section-title">Farzandingizga Eng Kuchli Mutaxassislar Dars Beradi</h2>
+        <p class="section-desc">O'z sohasining haqiqiy ustalari, xalqaro tajribaga ega ustoz va mentorlar jamoasi.</p>
+      </div>
+
+      <div class="teachers-grid">
+        <div class="teacher-card">
+          <div class="teacher-avatar">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <span class="teacher-subject">Matematika & Mantiq</span>
+          <h3 class="teacher-name">Sardor Alimov</h3>
+          <p class="teacher-experience">14 yillik tajriba | Xalqaro Olimpiada Hakamlar Hay'ati A'zosi</p>
+          <div class="teacher-badges">
+            <span>Prezident Maktabi Dasturchisi</span>
+            <span>Oliy Toifa</span>
+          </div>
+        </div>
+
+        <div class="teacher-card">
+          <div class="teacher-avatar alt-avatar">
+            <i class="fa-solid fa-user-graduate"></i>
+          </div>
+          <span class="teacher-subject">Ingliz Tili & SAT</span>
+          <h3 class="teacher-name">Elena Richardson</h3>
+          <p class="teacher-experience">10 yillik tajriba | Cambridge CELTA & DELTA Sertifikati</p>
+          <div class="teacher-badges">
+            <span>Native Speaker</span>
+            <span>IELTS 9.0 Trener</span>
+          </div>
+        </div>
+
+        <div class="teacher-card">
+          <div class="teacher-avatar">
+            <i class="fa-solid fa-user-astronaut"></i>
+          </div>
+          <span class="teacher-subject">Robototexnika & IT</span>
+          <h3 class="teacher-name">Bobur Mirzayev</h3>
+          <p class="teacher-experience">8 yillik tajriba | Silikon Vodiysi Loyihalari Ishtirokchisi</p>
+          <div class="teacher-badges">
+            <span>Python & AI</span>
+            <span>WorldSkills G'olibi</span>
+          </div>
+        </div>
+
+        <div class="teacher-card">
+          <div class="teacher-avatar alt-avatar">
+            <i class="fa-solid fa-user-nurse"></i>
+          </div>
+          <span class="teacher-subject">Boshlang'ich Ta'lim</span>
+          <h3 class="teacher-name">Nilufar Qosimova</h3>
+          <p class="teacher-experience">16 yillik tajriba | Singapur Metodikasi Eksperti</p>
+          <div class="teacher-badges">
+            <span>Metodist-Ustoz</span>
+            <span>Yil O'qituvchisi 2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TO'LOV VA CHEGIRMALAR KALKULYATORI ==================== -->
+  <section class="section calc-section" id="kalkulyator">
+    <div class="container">
+      <div class="calc-card-wrapper">
+        <div class="calc-content-side">
+          <span class="sub-badge"><i class="fa-solid fa-calculator"></i> Smart Hisoblagich</span>
+          <h2>Ta'lim Narxini Onlayn Hisoblang</h2>
+          <p>Farzandingiz sinfi, to'lov muddatini va qo'shimcha xizmatlarni belgilang — tizim siz uchun shaxsiy chegirma va oylik summani hisoblab beradi!</p>
+          
+          <div class="calc-features">
+            <div class="cf-item">
+              <i class="fa-solid fa-badge-percent"></i>
+              <span>Yillik to'lovda <strong>15% chegirma</strong></span>
+            </div>
+            <div class="cf-item">
+              <i class="fa-solid fa-people-roof"></i>
+              <span>Ikkinchi farzandga <strong>10% chegirma</strong></span>
+            </div>
+            <div class="cf-item">
+              <i class="fa-solid fa-gift"></i>
+              <span>Barcha sport to'garaklari bepul taqdim etiladi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-form-side">
+          <div class="calc-group">
+            <label class="calc-label">1. Ta'lim bosqichini tanlang:</label>
+            <div class="calc-select-row">
+              <label class="radio-card">
+                <input type="radio" name="calcGrade" value="3800000" checked>
+                <div class="radio-body">
+                  <strong>Boshlang'ich (1-4)</strong>
+                  <span>3,800,000 so'm/oy</span>
+                </div>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="calcGrade" value="4200000">
+                <div class="radio-body">
+                  <strong>O'rta & Yuqori (5-11)</strong>
+                  <span>4,200,000 so'm/oy</span>
+                </div>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="calcGrade" value="4500000">
+                <div class="radio-body">
+                  <strong>Prezident Maktabiga</strong>
+                  <span>4,500,000 so'm/oy</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <label class="calc-label">2. To'lov turi:</label>
+            <div class="period-toggle">
+              <button type="button" class="period-btn active" data-period="monthly">Oylik to'lov</button>
+              <button type="button" class="period-btn" data-period="quarterly">Choraklik (-5%)</button>
+              <button type="button" class="period-btn" data-period="yearly">Yillik (-15%)</button>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <label class="calc-label">3. Qo'shimcha xizmatlar:</label>
+            <div class="checkboxes-grid">
+              <label class="check-item">
+                <input type="checkbox" id="calcBus" value="450000">
+                <span>Maktab avtobusi (+450,000 so'm)</span>
+              </label>
+              <label class="check-item">
+                <input type="checkbox" id="calcRobot" value="300000">
+                <span>Robototexnika klubi (+300,000 so'm)</span>
+              </label>
+              <label class="check-item">
+                <input type="checkbox" id="calcSibling">
+                <span>Oilada 2-farzand (10% maxsus chegirma)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- NATIJA QISMI -->
+          <div class="calc-result-box">
+            <div class="result-row">
+              <span>Boshlang'ich narx:</span>
+              <span id="basePriceDisplay">3,800,000 so'm</span>
+            </div>
+            <div class="result-row discount-row">
+              <span>Sizning tejamkorligingiz:</span>
+              <span id="discountDisplay" class="text-success">0 so'm</span>
+            </div>
+            <hr class="calc-divider">
+            <div class="result-final-row">
+              <div>
+                <span class="final-title">Jami to'lov:</span>
+                <span class="final-sub" id="paymentPeriodNote">Oyiga</span>
+              </div>
+              <div class="final-amount" id="finalAmountDisplay">3,800,000 <span>so'm</span></div>
+            </div>
+            <a href="#qabul" class="btn btn-primary btn-block mt-3" id="calcApplyBtn">
+              <i class="fa-solid fa-check-circle"></i> Ushbu reja bilan ariza qoldirish
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ASOSIY ARIZA TOPSHIRISH BO'LIMI ==================== -->
+  <section class="section application-section" id="qabul">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="sub-badge warning"><i class="fa-solid fa-file-signature"></i> Qabul 2025/2026</span>
+        <h2 class="section-title">Mega Wester Maktabiga Online Ariza Qoldiring</h2>
+        <p class="section-desc">
+          Quyidagi barcha maydonlarni to'ldiring. Mutaxassislarimiz 15 daqiqa ichida siz bilan bog'lanib, bepul sinov darsi va maktab ekskursiyasiga taklif qilishadi.
+        </p>
+      </div>
+
+      <div class="application-card glass-panel-strong">
+        <div class="app-card-badge">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Joylar soni cheklangan (Har bir sinfda faqat 16 nafar o'quvchi)</span>
+        </div>
+
+        <form id="admissionForm" class="admission-form" novalidate>
+          <div class="form-grid">
+            <!-- 1. ISM -->
+            <div class="form-group">
+              <label for="firstName" class="form-label">
+                <i class="fa-solid fa-user"></i> O'quvchi yoki ota-onaning ismi <span class="required">*</span>
+              </label>
+              <div class="input-wrap">
+                <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Masalan: Sardor" required autocomplete="given-name">
+                <i class="fa-solid fa-check field-check"></i>
+              </div>
+              <small class="error-feedback" id="firstNameError"></small>
+            </div>
+
+            <!-- 2. FAMILIYA -->
+            <div class="form-group">
+              <label for="lastName" class="form-label">
+                <i class="fa-solid fa-id-card"></i> Familiyasi <span class="required">*</span>
+              </label>
+              <div class="input-wrap">
+                <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Masalan: Karimov" required autocomplete="family-name">
+                <i class="fa-solid fa-check field-check"></i>
+              </div>
+              <small class="error-feedback" id="lastNameError"></small>
+            </div>
+
+            <!-- 3. QAYERDANLIGI (VILOYAT / SHAHAR) -->
+            <div class="form-group">
+              <label for="userRegion" class="form-label">
+                <i class="fa-solid fa-map-location-dot"></i> Qayerdansiz? (Viloyat / Shahar) <span class="required">*</span>
+              </label>
+              <div class="input-wrap">
+                <select id="userRegion" name="userRegion" class="form-control" required>
+                  <option value="" disabled selected>Viloyatingizni tanlang...</option>
+                  <option value="Toshkent shahri">Toshkent shahri</option>
+                  <option value="Toshkent viloyati">Toshkent viloyati</option>
+                  <option value="Samarqand viloyati">Samarqand viloyati</option>
+                  <option value="Buxoro viloyati">Buxoro viloyati</option>
+                  <option value="Andijon viloyati">Andijon viloyati</option>
+                  <option value="Farg'ona viloyati">Farg'ona viloyati</option>
+                  <option value="Namangan viloyati">Namangan viloyati</option>
+                  <option value="Qashqadaryo viloyati">Qashqadaryo viloyati</option>
+                  <option value="Surxondaryo viloyati">Surxondaryo viloyati</option>
+                  <option value="Xorazm viloyati">Xorazm viloyati</option>
+                  <option value="Navoiy viloyati">Navoiy viloyati</option>
+                  <option value="Jizzax viloyati">Jizzax viloyati</option>
+                  <option value="Sirdaryo viloyati">Sirdaryo viloyati</option>
+                  <option value="Qoraqalpog'iston Respublikasi">Qoraqalpog'iston Respublikasi</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
+              <small class="error-feedback" id="userRegionError"></small>
+            </div>
+
+            <!-- 4. ANIQ MANZIL (TUMAN / KO'CHA) -->
+            <div class="form-group">
+              <label for="userAddress" class="form-label">
+                <i class="fa-solid fa-house"></i> Yashash tumani yoki manzili <span class="required">*</span>
+              </label>
+              <div class="input-wrap">
+                <input type="text" id="userAddress" name="userAddress" class="form-control" placeholder="Masalan: Yunusobod tumani, 4-mavze" required>
+                <i class="fa-solid fa-check field-check"></i>
+              </div>
+              <small class="error-feedback" id="userAddressError"></small>
+            </div>
+
+            <!-- 5. TELEFON RAQAM -->
+            <div class="form-group">
+              <label for="phoneNumber" class="form-label">
+                <i class="fa-solid fa-phone"></i> Telefon raqamingiz <span class="required">*</span>
+              </label>
+              <div class="input-wrap">
+                <span class="phone-prefix">+998</span>
+                <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control phone-input" placeholder="(90) 123-45-67" required autocomplete="tel">
+                <i class="fa-solid fa-check field-check"></i>
+              </div>
+              <small class="input-hint">Bog'lanish uchun doimiy ishlaydigan raqamni kiriting</small>
+              <small class="error-feedback" id="phoneNumberError"></small>
+            </div>
+
+            <!-- 6. SINF / YO'NALISHNI TANLASH -->
+            <div class="form-group">
+              <label for="targetClass" class="form-label">
+                <i class="fa-solid fa-graduation-cap"></i> Qaysi sinf / yo'nalishga? <span class="required">*</span>
+              </label>
+              <div class="input-wrap">
+                <select id="targetClass" name="targetClass" class="form-control" required>
+                  <option value="" disabled selected>Sinfni tanlang...</option>
+                  <option value="1-sinf (Boshlang'ich)">1-sinf (Boshlang'ich ta'lim)</option>
+                  <option value="2-4 sinflar">2 - 4 sinflar</option>
+                  <option value="5-7 sinflar">5 - 7 sinflar (O'rta ta'lim)</option>
+                  <option value="8-9 sinflar">8 - 9 sinflar (Gimnaziya)</option>
+                  <option value="10-11 sinflar">10 - 11 sinflar (OTMga tayyorlov)</option>
+                  <option value="Prezident Maktabiga Tayyorlov">Prezident Maktabiga Tayyorlov (4-6 sinf)</option>
+                  <option value="Mega Wester IT Akademiya">Mega Wester IT & Kiber Akademiya</option>
+                  <option value="Xorijiy Tillar (IELTS/SAT)">Xorijiy Tillar (IELTS / SAT Intensive)</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
+              <small class="error-feedback" id="targetClassError"></small>
+            </div>
+          </div>
+
+          <!-- QO'SHIMCHA SAVOL YOKI IZOH -->
+          <div class="form-group full-width mt-2">
+            <label for="userMessage" class="form-label">
+              <i class="fa-solid fa-comment-dots"></i> Qo'shimcha istak, savol yoki qiziqishlar (Ixtiyoriy)
+            </label>
+            <textarea id="userMessage" name="userMessage" class="form-control" rows="3" placeholder="Farzandingizning qiziqishlari, avtobus zarurligi yoki boshqa ma'lumotlarni yozishingiz mumkin..."></textarea>
+          </div>
+
+          <!-- ROZILIK CHECKBOX -->
+          <div class="form-agree">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="agreeTerms" checked required>
+              <span class="checkmark"></span>
+              <span class="agree-text">
+                Shaxsiy ma'lumotlarimni qayta ishlashga va maktab mutaxassisining qo'ng'irog'ini qabul qilishga roziman.
+              </span>
+            </label>
+            <small class="error-feedback" id="agreeTermsError"></small>
+          </div>
+
+          <!-- YUBORISH TUGMASI -->
+          <div class="form-submit-row">
+            <button type="submit" class="btn btn-primary btn-xl submit-btn" id="submitFormBtn">
+              <span class="btn-text">
+                <i class="fa-solid fa-paper-plane"></i> Arizani Tasdiqlash va Yuborish
+              </span>
+              <span class="btn-spinner d-none">
+                <i class="fa-solid fa-circle-notch fa-spin"></i> Yuborilmoqda...
+              </span>
+            </button>
+            <div class="guarantee-note">
+              <i class="fa-solid fa-lock text-success"></i> Ma'lumotlaringiz 100% himoyalangan va begonalarga berilmaydi.
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FIKRLAR / TESTIMONIALS ==================== -->
+  <section class="section testimonials-section" id="fikrlar">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="sub-badge"><i class="fa-solid fa-heart"></i> Minnatdorlik</span>
+        <h2 class="section-title">Ota-onalar va O'quvchilarimiz Fikrlari</h2>
+        <p class="section-desc">Bizning eng katta yutug'imiz — baxtli o'quvchilarimiz va xotirjam ota-onalarimizning ishonchi.</p>
+      </div>
+
+      <div class="testimonials-slider-wrapper">
+        <button class="slider-arrow prev" id="sliderPrevBtn" aria-label="Oldingi fikr"><i class="fa-solid fa-arrow-left"></i></button>
+
+        <div class="testimonials-track" id="testimonialsTrack">
+          <!-- 1-fikr -->
+          <div class="testi-card active">
+            <div class="testi-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testi-text">
+              "O'g'lim 3-sinfga Mega Wester maktabiga o'tdi. Eng quvonarlisi — darsdan keyin uyda uy vazifasi deb asabiylashmaymiz, hamma darslar maktabda o'qituvchilar bilan birga puxta qilinadi. Bolamning ingliz tilida erkin gapira boshlaganidan nihoyatda mamnunmiz!"
+            </p>
+            <div class="testi-author">
+              <div class="author-avatar"><i class="fa-solid fa-user"></i></div>
+              <div class="author-info">
+                <h4>Dilnoza Rahimova</h4>
+                <span>3-sinf o'quvchisi onasi (Toshkent sh.)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2-fikr -->
+          <div class="testi-card">
+            <div class="testi-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testi-text">
+              "Mega Wester Prezident maktabiga tayyorlov guruhiga qatnashdik. Berilgan bilim va testlar sifati juda yuqori darajada. Natijada qizim Prezident maktabiga 1-o'rin bilan grant yutdi! Barcha ustozlarga, ayniqsa Sardor domlaga katta rahmat!"
+            </p>
+            <div class="testi-author">
+              <div class="author-avatar"><i class="fa-solid fa-user-check"></i></div>
+              <div class="author-info">
+                <h4>Akmal Tursunov</h4>
+                <span>6-sinf o'quvchisi otasi (Samarqand)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3-fikr -->
+          <div class="testi-card">
+            <div class="testi-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testi-text">
+              "IT va robototexnika sinfi haqiqatan ajoyib. Farzandim endi telefon o'yinlariga vaqt sarflamaydi, balki o'zi Python dasturlashda o'yinlar yaratyapti. Maktabdagi zamonaviy muhit bolalarni ijodkorlikka ilhomlantiradi."
+            </p>
+            <div class="testi-author">
+              <div class="author-avatar"><i class="fa-solid fa-user-tie"></i></div>
+              <div class="author-info">
+                <h4>Shavkat Zokirov</h4>
+                <span>8-sinf o'quvchisi otasi (Farg'ona)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="slider-arrow next" id="sliderNextBtn" aria-label="Keyingi fikr"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+      <!-- Slayder nuqtalari -->
+      <div class="slider-dots" id="sliderDots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ (SAVOLLAR VA JAVOBLAR) ==================== -->
+  <section class="section faq-section" id="savollar">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="sub-badge"><i class="fa-solid fa-circle-question"></i> Savollaringiz bormi?</span>
+        <h2 class="section-title">Ko'p So'raladigan Savollar</h2>
+        <p class="section-desc">Ota-onalarni qiziqtirgan eng asosiy savollarga ochiq va to'liq javoblar.</p>
+      </div>
+
+      <div class="faq-accordion" id="faqAccordion">
+        <!-- 1 -->
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>Maktabga qabul jarayoni qanday bosqichlardan iborat?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Qabul jarayoni 3 bosqichda amalga oshiriladi: 1) Saytimizda ariza qoldirish yoki maktabga tashrif; 2) O'quvchining mantiq va xorijiy til bo'yicha diagnostik sinov testi; 3) Maktab psixologi va ota-onalar bilan suhbat. Natijalar 24 soat ichida e'lon qilinadi.</p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Oylik to'lov ichiga qanday xizmatlar kiradi?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Oylik to'lov ichiga: soat 08:30 dan 17:30 gacha to'liq ta'lim, barcha darslik va tarqatma materiallar, kuniga 3 mahal issiq va muvozanatli ovqatlanish, sport to'garaklari (shaxmat, gimnastika, suzish), uy vazifalarini nazorat qilish va tibbiy xizmat kiradi.</p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Maktabda transport (avtobus) xizmati mavjudmi?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Ha, shahar va shahar atrofi bo'ylab maxsus zamonaviy mikroavtobuslarimiz harakatlanadi. Har bir transportda kuzatuvchi tarbiyachi bo'lib, o'quvchi uyingiz darvozasidan olinib, kechki payt xavfsiz holda qaytarib topshiriladi.</p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Iqtidorli bolalar uchun grantlar va chegirmalar bormi?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Ha! Har yili o'tkaziladigan "Mega Wester Grand Olimpiadasi" g'oliblariga 20% dan 100% gacha bepul ta'lim grantlari beriladi. Shuningdek, bir oiladan 2 yoki undan ortiq farzand o'qisa, 10% doimiy chegirma mavjud.</p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Bitiruvchilarga qanday hujjat (diplom/attestat) beriladi?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Maktabimiz O'zbekiston Respublikasi Maktabgacha va Maktab ta'limi vazirligi litsenziyasiga ega. Bitiruvchilarga davlat namunasidagi rasmiy attestat hamda xalqaro Cambridge va IELTS sertifikatlari topshiriladi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BOG'LANISH VA LOKATSIYA ==================== -->
+  <section class="section contact-section" id="boglanish">
+    <div class="container">
+      <div class="contact-card-glass">
+        <div class="contact-info-col">
+          <span class="sub-badge"><i class="fa-solid fa-headset"></i> Aloqa</span>
+          <h2 class="contact-title">Biz Har Doim Siz Bilan Bog'lanishga Tayyormiz</h2>
+          <p class="contact-sub">Savollaringiz bormi? Bizga qo'ng'iroq qiling yoki maktabimizga bevosita tashrif buyuring. Shaxsiy ekskursiya tashkil etib beramiz!</p>
+
+          <div class="contact-details">
+            <div class="detail-item">
+              <div class="d-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <strong>Bosh Manzilimiz:</strong>
+                <p>Toshkent shahri, Yunusobod tumani, Amir Temur shoh ko'chasi, 128-uy (Mega Wester binosi)</p>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <div class="d-icon"><i class="fa-solid fa-phone-volume"></i></div>
+              <div>
+                <strong>Qabul Komissiyasi:</strong>
+                <p><a href="tel:+998712000000">+998 (71) 200-00-00</a> / <a href="tel:+998901234567">+998 (90) 123-45-67</a></p>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <div class="d-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <strong>Elektron Pochta:</strong>
+                <p><a href="mailto:info@megawester.uz">info@megawester.uz</a></p>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <div class="d-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <strong>Ish Grafigi:</strong>
+                <p>Dushanba - Shanba: 08:00 dan 18:30 gacha (Yakshanba - Qabul bo'yicha maslahat)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <span>Ijtimoiy tarmoqlarimiz:</span>
+            <div class="social-links">
+              <a href="https://t.me" target="_blank" rel="noopener" class="soc-btn telegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener" class="soc-btn instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://youtube.com" target="_blank" rel="noopener" class="soc-btn youtube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://facebook.com" target="_blank" rel="noopener" class="soc-btn facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- INTERAKTIV XARITA VA TEZKOR QO'NG'IROQ KARTASI -->
+        <div class="contact-interactive-col">
+          <div class="map-mockup-card">
+            <div class="map-badge">
+              <i class="fa-solid fa-compass"></i> Mega Wester Bosh Kampusi
+            </div>
+            <!-- Xarita simulyatsiyasi -->
+            <div class="visual-map">
+              <div class="map-pin-pulse">
+                <div class="pin"><i class="fa-solid fa-school"></i></div>
+                <div class="pulse-ring"></div>
+              </div>
+              <div class="map-info-popup">
+                <strong>Mega Wester Xususiy Maktabi</strong>
+                <span>Yunusobod filiali • Ochiq</span>
+              </div>
+            </div>
+            <div class="map-footer-action">
+              <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-outline-white btn-block">
+                <i class="fa-solid fa-diamond-turn-right"></i> Google Xaritada Yo'nalish Olish
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER (PAKI QISM) ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col col-main">
+        <div class="footer-logo">
+          <div class="logo-icon-wrap sm">
+            <svg class="logo-svg" viewBox="0 0 60 60" fill="none">
+              <rect width="60" height="60" rx="16" fill="url(#logoGrad)"/>
+              <path d="M14 18L30 11L46 18V31C46 41 39 49 30 52C21 49 14 41 14 31V18Z" stroke="#FFFFFF" stroke-width="2.5" fill="rgba(255,255,255,0.08)"/>
+              <path d="M21 34V22L30 30L39 22V34" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="logo-title">MEGA <span>WESTER</span></span>
+        </div>
+        <p class="footer-about">
+          O'zbekiston yoshlarini dunyo standartlaridagi bilim va intizom bilan tarbiyalayotgan xususiy innovatsion ta'lim dargohi.
+        </p>
+        <p class="license-info">
+          <i class="fa-solid fa-certificate"></i> Davlat litsenziyasi: № NAS UZ 04-2018-0994
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Tezkor Havolalar</h4>
+        <ul class="footer-links">
+          <li><a href="#bosh-sahifa"><i class="fa-solid fa-angle-right"></i> Bosh sahifa</a></li>
+          <li><a href="#biz-haqimizda"><i class="fa-solid fa-angle-right"></i> Biz haqimizda</a></li>
+          <li><a href="#yonalishlar"><i class="fa-solid fa-angle-right"></i> Ta'lim yo'nalishlari</a></li>
+          <li><a href="#afzalliklar"><i class="fa-solid fa-angle-right"></i> Afzalliklarimiz</a></li>
+          <li><a href="#ustozlar"><i class="fa-solid fa-angle-right"></i> Malakali Ustozlar</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Qabul & Bo'limlar</h4>
+        <ul class="footer-links">
+          <li><a href="#qabul"><i class="fa-solid fa-angle-right"></i> Online Ariza Qoldirish</a></li>
+          <li><a href="#kalkulyator"><i class="fa-solid fa-angle-right"></i> To'lov Kalkulyatori</a></li>
+          <li><a href="#savollar"><i class="fa-solid fa-angle-right"></i> Savol-Javoblar (FAQ)</a></li>
+          <li><a href="#fikrlar"><i class="fa-solid fa-angle-right"></i> Ota-onalar fikrlari</a></li>
+          <li><a href="#boglanish"><i class="fa-solid fa-angle-right"></i> Manzil va Aloqa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Aloqa Markazi</h4>
+        <p class="footer-contact-item"><i class="fa-solid fa-phone"></i> +998 (71) 200-00-00</p>
+        <p class="footer-contact-item"><i class="fa-solid fa-mobile-screen"></i> +998 (90) 123-45-67</p>
+        <p class="footer-contact-item"><i class="fa-solid fa-envelope"></i> qabul@megawester.uz</p>
+        <p class="footer-contact-item"><i class="fa-solid fa-location-dot"></i> Toshkent sh., Yunusobod</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>© 2025 Mega Wester Xususiy Maktabi. Barcha huquqlar qonun bilan himoyalangan.</p>
+        <p class="footer-made">Zamonaviy ta'lim bilan kelajak sari!</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== DOIMIY QALQIB TURUVCHI TUGMALAR ==================== -->
+  <!-- Yuqoriga qaytish tugmasi -->
+  <button id="scrollToTopBtn" class="floating-btn scroll-top-btn" title="Yuqoriga qaytish" aria-label="Yuqoriga chiqish">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Tezkor qo'ng'iroq / Callback tugmasi -->
+  <button id="quickCallBtn" class="floating-btn quick-call-btn" title="Tezkor qayta qo'ng'iroq" aria-label="Tezkor qo'ng'iroq">
+    <i class="fa-solid fa-phone"></i>
+    <span class="btn-ripple"></span>
+  </button>
+
+  <!-- ==================== MODAL: ARIZA YUBORILGANDAGI CHIP / CHEK ==================== -->
+  <div class="modal-backdrop" id="successModal">
+    <div class="modal-dialog">
+      <div class="modal-content text-center">
+        <button class="modal-close" id="closeSuccessModalBtn">&times;</button>
+        <div class="modal-success-icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h3 class="modal-title">Arizangiz Muvaffaqiyatli Qabul Qilindi!</h3>
+        <p class="modal-desc">
+          Hurmatli <strong id="modalApplicantName">Foydalanuvchi</strong>, Mega Wester maktabiga qiziqish bildirganingiz uchun tashakkur!
+        </p>
+
+        <div class="ticket-card">
+          <div class="ticket-row">
+            <span>Ariza raqami:</span>
+            <strong id="modalTicketId">#MW-2025-001</strong>
+          </div>
+          <div class="ticket-row">
+            <span>Hudud / Manzil:</span>
+            <strong id="modalApplicantRegion">Toshkent</strong>
+          </div>
+          <div class="ticket-row">
+            <span>Telefon raqami:</span>
+            <strong id="modalApplicantPhone">+998 ...</strong>
+          </div>
+          <div class="ticket-row">
+            <span>Tanlangan yo'nalish:</span>
+            <strong id="modalApplicantCourse">1-sinf</strong>
+          </div>
+          <div class="ticket-badge">
+            <i class="fa-solid fa-clock"></i> Operatorimiz 15 daqiqa ichida qo'ng'iroq qiladi
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-block mt-3" id="closeSuccessModalDoneBtn">
+          Tushundim, Rahmat!
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: TEZKOR QAYTA QO'NG'IROQ ==================== -->
+  <div class="modal-backdrop" id="callbackModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button class="modal-close" id="closeCallbackModalBtn">&times;</button>
+        <div class="modal-header-icon">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h3 class="modal-title">1 daqiqada bepul konsultatsiya</h3>
+        <p class="modal-desc">Raqamingizni qoldiring, mutaxassisimiz zudlik bilan sizga qo'ng'iroq qiladi va barcha savollaringizga javob beradi.</p>
+
+        <form id="quickCallbackForm">
+          <div class="form-group">
+            <label class="form-label">Ismingiz:</label>
+            <input type="text" id="quickName" class="form-control" placeholder="Ismingizni kiriting" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Telefon raqamingiz:</label>
+            <div class="input-wrap">
+              <span class="phone-prefix">+998</span>
+              <input type="tel" id="quickPhone" class="form-control phone-input" placeholder="(90) 123-45-67" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block mt-2">
+            <i class="fa-solid fa-phone-arrow-up-right"></i> Qo'ng'iroqni kutaman
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: VIRTUAL SAYOHAT (VIDEO) ==================== -->
+  <div class="modal-backdrop" id="videoModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <button class="modal-close" id="closeVideoModalBtn">&times;</button>
+        <h3 class="modal-title text-center mb-2">Mega Wester Maktabi Bo'ylab Virtual Ekskursiya</h3>
+        <div class="video-mockup-wrapper">
+          <div class="video-placeholder">
+            <div class="video-play-huge">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="video-overlay-info">
+              <h4>Zamonaviy sinfxonalar, laboratoriyalar va sport maydoni</h4>
+              <p>Maktabimiz 3 gektarlik xavfsiz va yashil hududda joylashgan.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer-action text-center mt-3">
+          <a href="#qabul" class="btn btn-primary" onclick="document.getElementById('videoModal').classList.remove('active');">
+            <i class="fa-solid fa-calendar-check"></i> Maktabga Jonli Tashrif Buyurish
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: SAQLANGAN ARIZALAR TARIXI ==================== -->
+  <div class="modal-backdrop" id="historyModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <button class="modal-close" id="closeHistoryModalBtn">&times;</button>
+        <div class="modal-header-icon">
+          <i class="fa-solid fa-clipboard-list"></i>
+        </div>
+        <h3 class="modal-title text-center">Yuborilgan Arizalar Holati</h3>
+        <p class="modal-desc text-center">Siz ushbu qurilmadan yuborgan arizalaringiz ro'yxati va holati:</p>
+
+        <div id="applicationsListContainer" class="history-list-box">
+          <!-- Dinamik ravishda JS orqali to'ldiriladi -->
+        </div>
+
+        <div class="text-center mt-3">
+          <button class="btn btn-outline-danger btn-sm" id="clearHistoryBtn">
+            <i class="fa-solid fa-trash-can"></i> Ro'yxatni tozalash
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TOAST BILDIRISHNOMA ==================== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Asosiy JS -->
+  <script src="script.js"></script>
+</body>
+</html>
